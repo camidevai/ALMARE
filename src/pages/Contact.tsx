@@ -98,7 +98,7 @@ export default function Contact() {
       <HeroSection
         title={t('contact:hero.title')}
         subtitle={t('contact:hero.subtitle')}
-        backgroundImage="https://images.pexels.com/photos/6646964/pexels-photo-6646964.jpeg"
+        backgroundImage="https://subir-imagen.com/images/2025/09/04/download.jpg"
       />
 
       <section className="py-16">

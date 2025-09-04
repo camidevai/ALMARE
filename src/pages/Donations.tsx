@@ -85,7 +85,7 @@ export default function Donations() {
       <HeroSection
         title={t('donations:hero.title')}
         subtitle={t('donations:hero.subtitle')}
-        backgroundImage="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg"
+        backgroundImage="https://subir-imagen.com/images/2025/09/04/download67c4166f06f8b5f8.jpg"
       />
 
       <section className="py-16">

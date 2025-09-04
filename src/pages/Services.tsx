@@ -48,7 +48,7 @@ export default function Services() {
       <HeroSection
         title={t('services:hero.title')}
         subtitle={t('services:hero.subtitle')}
-        backgroundImage="https://images.pexels.com/photos/6646862/pexels-photo-6646862.jpeg"
+        backgroundImage="https://subir-imagen.com/images/2025/09/04/download1fc9cc694c46ca51.jpg"
       />
 
       {/* Programs */}

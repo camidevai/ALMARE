@@ -68,7 +68,7 @@ export default function Transparency() {
       <HeroSection
         title={t('transparency:hero.title')}
         subtitle={t('transparency:hero.subtitle')}
-        backgroundImage="https://images.pexels.com/photos/6646919/pexels-photo-6646919.jpeg"
+        backgroundImage="https://subir-imagen.com/images/2025/09/04/download30275424eb7ff8f1.jpg"
       />
 
       {/* Financial Overview */}

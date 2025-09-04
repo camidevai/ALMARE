@@ -7,7 +7,7 @@ export interface SEOData {
 }
 
 export const defaultSEO: SEOData = {
-  title: 'Almare - Transformando Vidas',
+  title: 'Almare - Cuidamos la mente, acompañamos el alma.',
   description: 'Organización sin fines de lucro dedicada a mejorar la calidad de vida de comunidades vulnerables.',
   keywords: 'ONG, organización sin fines de lucro, ayuda social, donaciones, transparencia',
   ogImage: '/og-image.jpg',

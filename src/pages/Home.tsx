@@ -37,7 +37,7 @@ export default function Home() {
         ctaText={t('home:hero.cta')}
         ctaLink="/about"
         size="large"
-        backgroundImage="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg"
+        backgroundImage="https://subir-imagen.com/images/2025/09/04/download.jpg"
       />
 
       {/* Impact Stats */}
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/6646964/pexels-photo-6646964.jpeg"
+                src="https://subir-imagen.com/images/2025/09/04/download.jpg"
                 alt="Community work"
                 className="rounded-lg shadow-lg"
               />

@@ -55,7 +55,7 @@ export default function Blog() {
       excerpt: 'Publicamos nuestro informe anual de transparencia donde detallamos todos nuestros proyectos, finanzas y el impacto generado.',
       publishedAt: '2024-11-10',
       author: 'María González',
-      image: 'https://images.pexels.com/photos/6646919/pexels-photo-6646919.jpeg',
+      image: 'https://subir-imagen.com/images/2025/09/04/download30275424eb7ff8f1.jpg',
       category: 'Transparencia',
     },
     {
@@ -100,7 +100,7 @@ export default function Blog() {
       <HeroSection
         title={t('blog:hero.title')}
         subtitle={t('blog:hero.subtitle')}
-        backgroundImage="https://images.pexels.com/photos/6646964/pexels-photo-6646964.jpeg"
+        backgroundImage="https://subir-imagen.com/images/2025/09/04/download.jpg"
       />
 
       <section className="py-16">
