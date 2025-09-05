@@ -26,9 +26,17 @@
     "phone": "Teléfono",
     "message": "Mensaje"
   },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "backHome": "Volver al inicio",
+    "backPrevious": "Página anterior"
+  },
   "footer": {
     "copyright": "© 2025 Almare. Todos los derechos reservados.",
     "mission": "Cuidamos la mente, acompañamos el alma.",
+    "quickLinks": "Enlaces Rápidos",
+    "privacyPolicy": "Políticas de Privacidad",
     "contact": {
       "title": "Contacto",
       "email": "info@almare.org",

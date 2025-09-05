@@ -26,9 +26,17 @@
     "phone": "Phone",
     "message": "Message"
   },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Back to home",
+    "backPrevious": "Previous page"
+  },
   "footer": {
     "copyright": "© 2025 Almare. All rights reserved.",
     "mission": "Transforming lives, building the future.",
+    "quickLinks": "Quick Links",
+    "privacyPolicy": "Privacy Policy",
     "contact": {
       "title": "Contact",
       "email": "info@almare.org",

@@ -21,6 +21,8 @@ import esBlog from '../i18n/es/pages/blog.json';
 import enBlog from '../i18n/en/pages/blog.json';
 import esContact from '../i18n/es/pages/contact.json';
 import enContact from '../i18n/en/pages/contact.json';
+import esPrivacy from '../i18n/es/pages/privacy.json';
+import enPrivacy from '../i18n/en/pages/privacy.json';
 
 const resources = {
   es: {
@@ -32,6 +34,7 @@ const resources = {
     donations: esDonations,
     blog: esBlog,
     contact: esContact,
+    privacy: esPrivacy,
   },
   en: {
     common: enCommon,
@@ -42,6 +45,7 @@ const resources = {
     donations: enDonations,
     blog: enBlog,
     contact: enContact,
+    privacy: enPrivacy,
   },
 };
 

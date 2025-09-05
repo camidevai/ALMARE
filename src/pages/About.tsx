@@ -114,30 +114,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            {t('about:team.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} hover>
-                <div className="text-center">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">{member.role}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }

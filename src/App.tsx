@@ -13,6 +13,7 @@ import Donations from './pages/Donations';
 import Blog from './pages/Blog';
 import Post from './pages/Post';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
 
 // Initialize i18n
@@ -33,6 +34,7 @@ function App() {
               <Route path="blog" element={<Blog />} />
               <Route path="blog/:slug" element={<Post />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="privacy-policy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

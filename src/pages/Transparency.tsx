@@ -23,42 +23,31 @@ export default function Transparency() {
     {
       icon: DollarSign,
       label: t('transparency:financials.totalDonations'),
-      value: '€245,830',
+      value: '€0',
       change: '+12%',
     },
     {
       icon: TrendingUp,
       label: t('transparency:financials.programExpenses'),
-      value: '85%',
+      value: '0%',
       change: 'del total',
     },
     {
       icon: CheckCircle,
       label: t('transparency:financials.adminCosts'),
-      value: '15%',
+      value: '0%',
       change: 'eficiencia',
     },
   ];
 
   const projects = [
     {
-      name: 'Escuela Rural San Miguel',
-      status: 'completed',
-      budget: '€45,000',
-      progress: 100,
-    },
-    {
-      name: 'Centro de Salud Comunitario',
-      status: 'inProgress',
-      budget: '€78,000',
-      progress: 65,
-    },
-    {
-      name: 'Programa Nutricional Infantil',
-      status: 'inProgress',
-      budget: '€23,500',
-      progress: 40,
-    },
+      name: '',
+      status: '',
+      budget: '',
+      progress: "",
+    }
+  
   ];
 
   return (

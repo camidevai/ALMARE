@@ -5,6 +5,7 @@
   },
   "form": {
     "title": "Hacer una Donación",
+    "currency": "Moneda",
     "amount": "Cantidad",
     "customAmount": "Cantidad personalizada",
     "personalInfo": "Información personal",
@@ -17,24 +18,26 @@
     "submitButton": "Donar",
     "processing": "Procesando..."
   },
+  "currencies": {
+    "EUR": "Euro",
+    "USD": "Dólar Estadounidense",
+    "CLP": "Peso Chileno"
+  },
   "impact": {
-    "title": "Tu Impacto",
+    "title": "Tu Impacto con ",
     "education": {
       "title": "Educación",
       "description": "Becas escolares y materiales educativos",
-      "amount": "€25",
       "impact": "Ayuda a un niño por un mes"
     },
     "health": {
       "title": "Salud",
       "description": "Atención médica básica y medicamentos",
-      "amount": "€50",
       "impact": "Tratamiento médico completo"
     },
     "nutrition": {
       "title": "Alimentación",
       "description": "Comidas nutritivas para familias vulnerables",
-      "amount": "€100",
       "impact": "Alimenta a una familia por una semana"
     }
   },

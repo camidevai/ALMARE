@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Heart, Globe, Menu, X } from 'lucide-react';
+import { Globe, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -35,7 +35,11 @@ export default function MainLayout() {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-blue-600" />
+              <img
+                src="https://subir-imagen.com/images/2025/09/04/bbc49be3-abe6-4e36-acf4-cfebdb870d17.png"
+                alt="Almare Logo"
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-2xl font-bold text-gray-900">Almare</span>
             </Link>
 
@@ -134,7 +138,11 @@ export default function MainLayout() {
             {/* Logo & Mission */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <Heart className="h-8 w-8 text-blue-400" />
+                <img
+                  src="https://subir-imagen.com/images/2025/09/04/bbc49be3-abe6-4e36-acf4-cfebdb870d17.png"
+                  alt="Almare Logo"
+                  className="h-10 w-10 object-contain"
+                />
                 <span className="text-2xl font-bold">Almare</span>
               </div>
               <p className="text-gray-300 mb-4">{t('footer.mission')}</p>
@@ -142,7 +150,7 @@ export default function MainLayout() {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+              <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
               <div className="space-y-2">
                 {navigation.slice(0, 4).map((item) => (
                   <Link
@@ -166,8 +174,18 @@ export default function MainLayout() {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>{t('footer.copyright')}</p>
+          <div className="border-t border-gray-800 mt-8 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-400">{t('footer.copyright')}</p>
+              <div className="flex space-x-6">
+                <Link
+                  to="/privacy-policy"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  {t('footer.privacyPolicy')}
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </footer>

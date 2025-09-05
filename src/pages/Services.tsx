@@ -82,7 +82,7 @@ export default function Services() {
                       to="/contact"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                     >
-                      Participar en este programa →
+                      {t('services:programs.participate')} →
                     </Link>
                   </div>
                   <div className={isReversed ? 'lg:col-start-1' : ''}>
@@ -103,23 +103,23 @@ export default function Services() {
       <section className="py-16 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            ¿Quieres formar parte del cambio?
+            {t('services:cta.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Únete a nosotros como voluntario o haz una donación para apoyar nuestros programas.
+            {t('services:cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
-              Ser Voluntario
+              {t('services:cta.volunteer')}
             </Link>
             <Link
               to="/donations"
               className="px-8 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >
-              {t('common:buttons.donate')}
+              {t('services:cta.donate')}
             </Link>
           </div>
         </div>

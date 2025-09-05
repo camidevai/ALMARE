@@ -15,6 +15,13 @@
     "development": {
       "title": "Desarrollo Comunitario",
       "description": "Proyectos de infraestructura y desarrollo económico local"
-    }
+    },
+    "participate": "Participar en este programa"
+  },
+  "cta": {
+    "title": "¿Quieres formar parte del cambio?",
+    "description": "Únete a nosotros como voluntario o haz una donación para apoyar nuestros programas.",
+    "volunteer": "Ser Voluntario",
+    "donate": "Donar"
   }
 }

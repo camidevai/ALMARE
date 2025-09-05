@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Políticas de Privacidad",
+    "subtitle": "Tu privacidad es importante para nosotros. Conoce cómo protegemos y manejamos tu información personal."
+  },
+  "introduction": {
+    "title": "Compromiso con tu Privacidad",
+    "lastUpdated": "Última actualización: 4 de septiembre de 2025",
+    "content1": "En Almare, respetamos y protegemos la privacidad de nuestros usuarios, donantes y voluntarios. Esta Política de Privacidad describe cómo recopilamos, utilizamos, almacenamos y protegemos tu información personal de acuerdo con la legislación chilena vigente, incluyendo la Ley N° 19.628 sobre Protección de la Vida Privada y sus modificaciones.",
+    "content2": "Al utilizar nuestros servicios, sitio web o interactuar con nuestra organización, aceptas las prácticas descritas en esta política."
+  },
+  "dataCollection": {
+    "title": "Información que Recopilamos",
+    "types": {
+      "identification": {
+        "title": "Datos de Identificación",
+        "description": "Nombre completo, RUT, dirección, teléfono y correo electrónico."
+      },
+      "navigation": {
+        "title": "Datos de Navegación",
+        "description": "Información sobre tu uso del sitio web, cookies y preferencias."
+      },
+      "communication": {
+        "title": "Datos de Comunicación",
+        "description": "Mensajes, consultas y comunicaciones que nos envíes."
+      }
+    },
+    "purposes": {
+      "title": "Finalidades del Tratamiento",
+      "donations": "Gestión de donaciones: Procesar y administrar tus contribuciones económicas.",
+      "communication": "Comunicación: Responder consultas, enviar actualizaciones sobre nuestros proyectos.",
+      "volunteering": "Voluntariado: Coordinar actividades de voluntariado y mantener contacto con voluntarios.",
+      "transparency": "Transparencia: Cumplir con obligaciones legales de transparencia y rendición de cuentas.",
+      "improvement": "Mejora de servicios: Analizar el uso del sitio web para mejorar la experiencia del usuario."
+    }
+  },
+  "security": {
+    "title": "Seguridad de la Información",
+    "description": "Implementamos medidas técnicas y organizativas apropiadas para proteger tu información personal:",
+    "measures": {
+      "encryption": "Cifrado SSL/TLS para todas las transmisiones de datos",
+      "access": "Acceso restringido a la información personal solo al personal autorizado",
+      "backup": "Sistemas de respaldo y recuperación de datos",
+      "audits": "Auditorías regulares de seguridad",
+      "training": "Capacitación continua del personal en protección de datos"
+    }
+  },
+  "retention": {
+    "title": "Conservación de Datos",
+    "description": "Conservamos tu información personal solo durante el tiempo necesario para:",
+    "purposes": {
+      "fulfillment": "Cumplir con las finalidades para las que fue recopilada",
+      "legal": "Satisfacer obligaciones legales, contables y fiscales (mínimo 6 años)",
+      "disputes": "Resolver disputas y hacer cumplir nuestros acuerdos"
+    },
+    "deletion": "Una vez transcurrido este período, procederemos a la eliminación segura de la información."
+  },
+  "rights": {
+    "title": "Tus Derechos",
+    "access": {
+      "title": "Derecho de Acceso",
+      "description": "Puedes solicitar información sobre qué datos personales tenemos sobre ti."
+    },
+    "rectification": {
+      "title": "Derecho de Rectificación",
+      "description": "Puedes solicitar la corrección de datos inexactos o incompletos."
+    },
+    "cancellation": {
+      "title": "Derecho de Cancelación",
+      "description": "Puedes solicitar la eliminación de tus datos personales."
+    },
+    "opposition": {
+      "title": "Derecho de Oposición",
+      "description": "Puedes oponerte al tratamiento de tus datos para fines específicos."
+    },
+    "exercise": {
+      "title": "Cómo Ejercer tus Derechos",
+      "description": "Para ejercer cualquiera de estos derechos, puedes contactarnos a través de:",
+      "email": "Email: privacidad@almare.org",
+      "address": "Dirección: Santiago, Chile",
+      "phone": "Teléfono: +56 2 1234 5678",
+      "response": "Responderemos a tu solicitud dentro de 8 días hábiles, conforme a la legislación chilena."
+    }
+  }
+}

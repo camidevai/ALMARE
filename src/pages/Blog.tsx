@@ -10,7 +10,7 @@ import { Calendar, User, ArrowRight } from 'lucide-react';
 
 export default function Blog() {
   const { t } = useTranslation(['blog', 'common']);
-  const [selectedCategory, setSelectedCategory] = useState('Todos');
+  const [selectedCategory, setSelectedCategory] = useState(t('blog:categories.all'));
 
   useEffect(() => {
     Analytics.pageView('/blog', t('blog:hero.title'));
@@ -78,11 +78,29 @@ export default function Blog() {
     },
   ];
 
-  const categories = ['Todos', 'Educación', 'Salud', 'Comunidad', 'Transparencia', 'Infraestructura', 'Desarrollo'];
+  const categories = [
+    { key: 'all', label: t('blog:categories.all') },
+    { key: 'education', label: t('blog:categories.education') },
+    { key: 'health', label: t('blog:categories.health') },
+    { key: 'community', label: t('blog:categories.community') },
+    { key: 'transparency', label: t('blog:categories.transparency') },
+    { key: 'infrastructure', label: t('blog:categories.infrastructure') },
+    { key: 'development', label: t('blog:categories.development') },
+  ];
 
-  const filteredPosts = selectedCategory === 'Todos' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
+  const filteredPosts = selectedCategory === t('blog:categories.all')
+    ? posts
+    : posts.filter(post => {
+        const categoryMap: { [key: string]: string } = {
+          'Educación': t('blog:categories.education'),
+          'Salud': t('blog:categories.health'),
+          'Comunidad': t('blog:categories.community'),
+          'Transparencia': t('blog:categories.transparency'),
+          'Infraestructura': t('blog:categories.infrastructure'),
+          'Desarrollo': t('blog:categories.development'),
+        };
+        return categoryMap[post.category] === selectedCategory;
+      });
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -110,22 +128,22 @@ export default function Blog() {
             <div className="flex flex-wrap gap-2 justify-center">
               {categories.map((category) => (
                 <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  key={category.key}
+                  onClick={() => setSelectedCategory(category.label)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === category
+                    selectedCategory === category.label
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
-                  {category}
+                  {category.label}
                 </button>
               ))}
             </div>
           </div>
 
           {/* Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+       {/*    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <Card key={post.slug} hover>
                 <img
@@ -168,10 +186,10 @@ export default function Blog() {
               </Card>
             ))}
           </div>
-
+ */}
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No hay artículos en esta categoría.</p>
+              <p className="text-gray-500 text-lg">{t('blog:empty')}</p>
             </div>
           )}
         </div>

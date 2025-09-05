@@ -45,7 +45,7 @@ export default function Contact() {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       Analytics.contactForm(data.subject);
-      alert('¡Mensaje enviado correctamente! Te responderemos pronto.');
+      alert(t('contact:form.success'));
       reset();
     } catch (error) {
       console.error('Error sending message:', error);
@@ -106,7 +106,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <Card>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('contact:form.title')}</h3>
               
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -118,7 +118,7 @@ export default function Contact() {
                       {...register('name')}
                       type="text"
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tu nombre completo"
+                      placeholder={t('contact:form.namePlaceholder')}
                     />
                     {errors.name && (
                       <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>
@@ -132,7 +132,7 @@ export default function Contact() {
                       {...register('email')}
                       type="email"
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="tu@email.com"
+                      placeholder={t('contact:form.emailPlaceholder')}
                     />
                     {errors.email && (
                       <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
@@ -142,13 +142,13 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Asunto
+                    {t('contact:form.subject')}
                   </label>
                   <input
                     {...register('subject')}
                     type="text"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="¿En qué te podemos ayudar?"
+                    placeholder={t('contact:form.subjectPlaceholder')}
                   />
                   {errors.subject && (
                     <p className="text-red-600 text-sm mt-1">{errors.subject.message}</p>
@@ -163,7 +163,7 @@ export default function Contact() {
                     {...register('message')}
                     rows={5}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Cuéntanos más detalles sobre tu consulta o interés..."
+                    placeholder={t('contact:form.messagePlaceholder')}
                   />
                   {errors.message && (
                     <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>
@@ -178,7 +178,7 @@ export default function Contact() {
                   {isSubmitting ? (
                     <div className="flex items-center space-x-2">
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                      <span>Enviando...</span>
+                      <span>{t('contact:form.sending')}</span>
                     </div>
                   ) : (
                     <div className="flex items-center space-x-2">
@@ -193,7 +193,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               <Card>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Información de contacto</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6">{t('contact:info.title')}</h3>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => {
                     const IconComponent = info.icon;
@@ -214,7 +214,7 @@ export default function Contact() {
               </Card>
 
               <Card>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Oportunidades de voluntariado</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6">{t('contact:volunteer.title')}</h3>
                 <div className="space-y-4">
                   {volunteerOpportunities.map((opportunity, index) => {
                     const IconComponent = opportunity.icon;
@@ -233,25 +233,25 @@ export default function Contact() {
                 </div>
                 <div className="mt-4 text-center">
                   <p className="text-sm text-gray-600 mb-4">
-                    ¿Interesado en ser voluntario? Incluye "Voluntariado" en el asunto de tu mensaje.
+                    {t('contact:volunteer.note')}
                   </p>
                 </div>
               </Card>
 
               <Card>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Horarios de atención</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('contact:schedule.title')}</h3>
                 <div className="space-y-2 text-gray-600">
                   <div className="flex justify-between">
-                    <span>Lunes - Viernes</span>
-                    <span className="font-medium">9:00 - 18:00</span>
+                    <span>{t('contact:schedule.weekdays')}</span>
+                    <span className="font-medium">{t('contact:schedule.weekdaysTime')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sábados</span>
-                    <span className="font-medium">10:00 - 14:00</span>
+                    <span>{t('contact:schedule.saturday')}</span>
+                    <span className="font-medium">{t('contact:schedule.saturdayTime')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Domingos</span>
-                    <span className="font-medium text-red-600">Cerrado</span>
+                    <span>{t('contact:schedule.sunday')}</span>
+                    <span className="font-medium text-red-600">{t('contact:schedule.closed')}</span>
                   </div>
                 </div>
               </Card>
@@ -261,42 +261,42 @@ export default function Contact() {
           {/* FAQ Section */}
           <div className="mt-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Preguntas frecuentes
+              {t('contact:faq.title')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  ¿Cómo puedo ser voluntario?
+                  {t('contact:faq.volunteer.question')}
                 </h4>
                 <p className="text-gray-600">
-                  Envíanos un mensaje con el asunto "Voluntariado" y te contactaremos para explicarte las oportunidades disponibles y el proceso de inscripción.
+                  {t('contact:faq.volunteer.answer')}
                 </p>
               </Card>
-              
+
               <Card>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  ¿Las donaciones son deducibles de impuestos?
+                  {t('contact:faq.tax.question')}
                 </h4>
                 <p className="text-gray-600">
-                  Sí, somos una organización registrada. Te proporcionaremos un certificado de donación para tus deducciones fiscales.
+                  {t('contact:faq.tax.answer')}
                 </p>
               </Card>
-              
+
               <Card>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  ¿Puedo visitar los proyectos?
+                  {t('contact:faq.visits.question')}
                 </h4>
                 <p className="text-gray-600">
-                  Organizamos visitas guiadas a nuestros proyectos para donantes y voluntarios. Contáctanos para coordinar una visita.
+                  {t('contact:faq.visits.answer')}
                 </p>
               </Card>
-              
+
               <Card>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  ¿Cómo garantizan la transparencia?
+                  {t('contact:faq.transparency.question')}
                 </h4>
                 <p className="text-gray-600">
-                  Publicamos informes anuales detallados y mantenemos una política de puertas abiertas. Visita nuestra sección de transparencia para más información.
+                  {t('contact:faq.transparency.answer')}
                 </p>
               </Card>
             </div>

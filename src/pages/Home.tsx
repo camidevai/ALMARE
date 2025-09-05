@@ -97,41 +97,41 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hover>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Donar</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('home:actions.donate.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Tu donación nos ayuda a continuar nuestro trabajo en las comunidades.
+                {t('home:actions.donate.description')}
               </p>
               <Link
                 to="/donations"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
               >
-                {t('common:buttons.donate')} →
+                {t('home:actions.donate.cta')} →
               </Link>
             </Card>
 
             <Card hover>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Voluntariado</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('home:actions.volunteer.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Únete a nuestro equipo de voluntarios y marca la diferencia.
+                {t('home:actions.volunteer.description')}
               </p>
               <Link
                 to="/contact"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
               >
-                Únete →
+                {t('home:actions.volunteer.cta')} →
               </Link>
             </Card>
 
             <Card hover>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Transparencia</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('home:actions.transparency.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Descubre cómo utilizamos los recursos y el impacto que generamos.
+                {t('home:actions.transparency.description')}
               </p>
               <Link
                 to="/transparency"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
               >
-                Ver Informes →
+                {t('home:actions.transparency.cta')} →
               </Link>
             </Card>
           </div>
