@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
   title: string;
@@ -36,12 +37,12 @@ export default function HeroSection({
           {subtitle}
         </p>
         {ctaText && ctaLink && (
-          <a
-            href={ctaLink}
+          <Link
+            to={ctaLink}
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-50 transition-colors"
           >
             {ctaText}
-          </a>
+          </Link>
         )}
       </div>
     </section>
