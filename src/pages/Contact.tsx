@@ -55,21 +55,21 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email',
-      value: 'info@almare.org',
-      description: 'Respuesta en 24 horas',
+      title: t('contact:info.email.title'),
+      value: t('contact:info.email.value'),
+      description: t('contact:info.email.description'),
     },
     {
       icon: Phone,
-      title: 'Teléfono',
-      value: '+34 123 456 789',
-      description: 'Lunes a Viernes, 9:00 - 18:00',
+      title: t('contact:info.phone.title'),
+      value: t('contact:info.phone.value'),
+      description: t('contact:info.phone.description'),
     },
     {
       icon: MapPin,
-      title: 'Oficina',
-      value: 'Madrid, España',
-      description: 'Cita previa necesaria',
+      title: t('contact:info.office.title'),
+      value: t('contact:info.office.value'),
+      description: t('contact:info.office.description'),
     },
   ];
 

@@ -20,17 +20,17 @@
     "title": "Contact information",
     "email": {
       "title": "Email",
-      "value": "info@almare.org",
+      "value": "contacto@fundacionalmare.cl",
       "description": "24-hour response"
     },
     "phone": {
       "title": "Phone",
-      "value": "+34 123 456 789",
+      "value": "+56 9 2182 2215",
       "description": "Monday to Friday, 9:00 - 18:00"
     },
     "office": {
       "title": "Office",
-      "value": "Madrid, Spain",
+      "value": "Santiago, Chile",
       "description": "Appointment required"
     }
   },
