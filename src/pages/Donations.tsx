@@ -9,6 +9,8 @@ import Card from '../components/Card';
 import { generatePageSEO } from '../lib/seo';
 import { Analytics } from '../lib/analytics';
 import { Heart, CreditCard, Shield, CheckCircle, Globe } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../lib/emailjs';
 
 type Currency = {
   code: string;
@@ -28,6 +30,18 @@ type DonationFormData = {
 };
 
 const currencies: Currency[] = [
+  // Active currency for PayPal integration
+  {
+    code: 'USD',
+    symbol: '$',
+    name: 'US Dollar',
+    minAmount: 5,
+    maxAmount: 12000,
+    presetAmounts: [10, 30, 60, 120]
+  }
+
+  // Future currencies - uncomment when PayPal supports them
+  /*
   {
     code: 'EUR',
     symbol: '€',
@@ -37,14 +51,6 @@ const currencies: Currency[] = [
     presetAmounts: [10, 25, 50, 100]
   },
   {
-    code: 'USD',
-    symbol: '$',
-    name: 'US Dollar',
-    minAmount: 5,
-    maxAmount: 12000,
-    presetAmounts: [10, 30, 60, 120]
-  },
-  {
     code: 'CLP',
     symbol: '$',
     name: 'Peso Chileno',
@@ -52,14 +58,17 @@ const currencies: Currency[] = [
     maxAmount: 8000000,
     presetAmounts: [8000, 20000, 40000, 80000]
   }
+  */
 ];
 
 export default function Donations() {
   const { t } = useTranslation(['donations', 'common']);
-  const [selectedCurrency, setSelectedCurrency] = useState<Currency>(currencies[0]);
+  const [selectedCurrency, setSelectedCurrency] = useState<Currency>(currencies[0]); // Default to USD
 
   useEffect(() => {
     Analytics.pageView('/donations', t('donations:hero.title'));
+    // Initialize EmailJS
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
   }, [t]);
 
   const seo = generatePageSEO({
@@ -93,12 +102,46 @@ export default function Donations() {
 
   const onSubmit = async (data: DonationFormData) => {
     try {
-      // Simulate donation processing
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send notification email via EmailJS
+      const emailParams = {
+        donor_name: data.name,
+        donor_email: data.email,
+        donation_amount: `${selectedCurrency.symbol}${data.amount}`,
+        currency: data.currency,
+        message: data.message || 'Sin mensaje',
+        donation_date: new Date().toLocaleString('es-CL', {
+          timeZone: 'America/Santiago',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        }),
+        to_email: EMAILJS_CONFIG.TO_EMAIL
+      };
+
+      // Send notification email
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        'template_y4iweb6',
+        emailParams
+      );
+
+      // Create PayPal URL
+      const paypalUrl = `https://www.paypal.me/FundacionAlmare/${data.amount}${data.currency}`;
+
+      // Track analytics
       Analytics.donation(data.amount);
-      alert(`¡Gracias por tu donación de ${selectedCurrency.symbol}${data.amount} ${selectedCurrency.code}!`);
+
+      // Open PayPal in new tab
+      window.open(paypalUrl, '_blank');
+
+      // Show success message
+      alert(t('donations:success.donation', { amount: `${selectedCurrency.symbol}${data.amount}` }));
+
     } catch (error) {
       console.error('Error processing donation:', error);
+      alert('Error al procesar la donación. Por favor, intenta nuevamente.');
     }
   };
 
@@ -128,40 +171,57 @@ export default function Donations() {
               <Card>
                 <div className="flex items-center space-x-2 mb-6">
                   <Heart className="h-6 w-6 text-red-500" />
-                  <h3 className="text-2xl font-bold text-gray-900">Hacer una Donación</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {t('donations:form.title')}
+                  </h3>
                 </div>
-                
+
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                  {/* Currency Selection */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-3">
-                      <Globe className="h-4 w-4 inline mr-2" />
-                      {t('donations:form.currency')}
-                    </label>
-                    <div className="grid grid-cols-3 gap-3 mb-4">
-                      {currencies.map((currency) => (
-                        <button
-                          key={currency.code}
-                          type="button"
-                          onClick={() => handleCurrencyChange(currency)}
-                          className={`p-3 border rounded-lg text-center font-medium transition-colors ${
-                            selectedCurrency.code === currency.code
-                              ? 'border-blue-600 bg-blue-50 text-blue-600'
-                              : 'border-gray-300 hover:border-gray-400'
-                          }`}
-                        >
-                          <div className="text-lg font-bold">{currency.symbol}</div>
-                          <div className="text-xs">{currency.code}</div>
-                        </button>
-                      ))}
+                  {/* Currency Selection - Hidden for now, only USD available */}
+                  {currencies.length > 1 && (
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-3">
+                        <Globe className="h-4 w-4 inline mr-2" />
+                        {t('donations:form.currency')}
+                      </label>
+                      <div className="grid grid-cols-3 gap-3 mb-4">
+                        {currencies.map((currency) => (
+                          <button
+                            key={currency.code}
+                            type="button"
+                            onClick={() => handleCurrencyChange(currency)}
+                            className={`p-3 border rounded-lg text-center font-medium transition-colors ${
+                              selectedCurrency.code === currency.code
+                                ? 'border-blue-600 bg-blue-50 text-blue-600'
+                                : 'border-gray-300 hover:border-gray-400'
+                            }`}
+                          >
+                            <div className="text-lg font-bold">{currency.symbol}</div>
+                            <div className="text-xs">{currency.code}</div>
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
+
+                  {/* Currency Info - Show current currency when only one available */}
+                  {currencies.length === 1 && (
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                      <div className="flex items-center space-x-2">
+                        <Globe className="h-4 w-4 text-blue-600" />
+                        <span className="text-sm font-medium text-blue-800">
+                          {t('donations:form.currency')}: {selectedCurrency.name} ({selectedCurrency.code})
+                        </span>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Amount Selection */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-3">
                       {t('donations:form.amount')} ({selectedCurrency.code})
                     </label>
+
                     <div className="grid grid-cols-4 gap-3 mb-4">
                       {selectedCurrency.presetAmounts.map((amount) => (
                         <button
@@ -178,6 +238,7 @@ export default function Donations() {
                         </button>
                       ))}
                     </div>
+
                     <div className="relative">
                       <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">{selectedCurrency.symbol}</span>
                       <input
@@ -269,7 +330,9 @@ export default function Donations() {
                     ) : (
                       <div className="flex items-center space-x-2">
                         <CreditCard className="h-4 w-4" />
-                        <span>{t('donations:form.submitButton')} {selectedCurrency.symbol}{selectedAmount?.toLocaleString()} {selectedCurrency.code}</span>
+                        <span>
+                          {t('donations:form.submitButton')} {selectedCurrency.symbol}{selectedAmount?.toLocaleString()} {selectedCurrency.code}
+                        </span>
                       </div>
                     )}
                   </button>
@@ -280,71 +343,65 @@ export default function Donations() {
             {/* Impact Information */}
             <div className="space-y-8">
               <Card>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('donations:impact.title', { currency: selectedCurrency.code })}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {t('donations:impact.title')}{selectedCurrency.code}
+                </h3>
                 <div className="space-y-4">
-               {/*    <div className="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg">
+                  <div className="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg">
                     <div className="bg-green-100 rounded-full p-2">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
                     <div>
                       <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-semibold text-gray-900">{t('donations:impact.education.title')}</h4>
+                        <h4 className="font-semibold text-gray-900">{t('donations:impact.workshops.title')}</h4>
                         <span className="text-blue-600 font-bold">{selectedCurrency.symbol}{selectedCurrency.presetAmounts[0].toLocaleString()}</span>
                       </div>
-                      <p className="text-sm text-gray-600 mb-1">{t('donations:impact.education.description')}</p>
-                      <p className="text-xs text-green-600 font-medium">{t('donations:impact.education.impact')}</p>
+                      <p className="text-sm text-gray-600 mb-1">{t('donations:impact.workshops.description')}</p>
+                      <p className="text-xs text-green-600 font-medium">{t('donations:impact.workshops.impact')}</p>
                     </div>
-                  </div> */}
+                  </div>
 
-                 {/*  <div className="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg">
+                  <div className="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg">
                     <div className="bg-green-100 rounded-full p-2">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
                     <div>
                       <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-semibold text-gray-900">{t('donations:impact.health.title')}</h4>
+                        <h4 className="font-semibold text-gray-900">{t('donations:impact.counseling.title')}</h4>
                         <span className="text-blue-600 font-bold">{selectedCurrency.symbol}{selectedCurrency.presetAmounts[2].toLocaleString()}</span>
                       </div>
-                      <p className="text-sm text-gray-600 mb-1">{t('donations:impact.health.description')}</p>
-                      <p className="text-xs text-green-600 font-medium">{t('donations:impact.health.impact')}</p>
+                      <p className="text-sm text-gray-600 mb-1">{t('donations:impact.counseling.description')}</p>
+                      <p className="text-xs text-green-600 font-medium">{t('donations:impact.counseling.impact')}</p>
                     </div>
-                  </div> */}
+                  </div>
 
-                  {/* <div className="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg">
+                  <div className="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg">
                     <div className="bg-green-100 rounded-full p-2">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
                     <div>
                       <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-semibold text-gray-900">{t('donations:impact.nutrition.title')}</h4>
+                        <h4 className="font-semibold text-gray-900">{t('donations:impact.support.title')}</h4>
                         <span className="text-blue-600 font-bold">{selectedCurrency.symbol}{selectedCurrency.presetAmounts[3].toLocaleString()}</span>
                       </div>
-                      <p className="text-sm text-gray-600 mb-1">{t('donations:impact.nutrition.description')}</p>
-                      <p className="text-xs text-green-600 font-medium">{t('donations:impact.nutrition.impact')}</p>
+                      <p className="text-sm text-gray-600 mb-1">{t('donations:impact.support.description')}</p>
+                      <p className="text-xs text-green-600 font-medium">{t('donations:impact.support.impact')}</p>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </Card>
 
               <Card>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">¿Por qué donar?</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {t('donations:whyDonate.title')}
+                </h3>
                 <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                    <span>85% de tu donación va directamente a programas</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                    <span>Transparencia total en el uso de fondos</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                    <span>Impacto medible y verificable</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
-                    <span>Certificado de donación para deducciones fiscales</span>
-                  </li>
+                  {(t('donations:whyDonate.reasons', { returnObjects: true }) as string[]).map((reason: string, index: number) => (
+                    <li key={index} className="flex items-start space-x-2">
+                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
+                      <span>{reason}</span>
+                    </li>
+                  ))}
                 </ul>
               </Card>
             </div>
