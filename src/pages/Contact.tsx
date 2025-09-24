@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import emailjs from '@emailjs/browser';
 import SEOHead from '../components/SEOHead';
 import HeroSection from '../components/HeroSection';
 import Card from '../components/Card';
 import { generatePageSEO } from '../lib/seo';
 import { Analytics } from '../lib/analytics';
-import { Mail, Phone, MapPin, Send, Clock, Users, Heart } from 'lucide-react';
+import { EMAILJS_CONFIG, EmailTemplateParams } from '../lib/emailjs';
+import { Mail, Phone, MapPin, Send, Clock, Users, Heart, CheckCircle, AlertCircle } from 'lucide-react';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Nombre requerido'),
@@ -21,9 +23,12 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function Contact() {
   const { t } = useTranslation(['contact', 'common']);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     Analytics.pageView('/contact', t('contact:hero.title'));
+    // Initialize EmailJS
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
   }, [t]);
 
   const seo = generatePageSEO({
@@ -42,13 +47,52 @@ export default function Contact() {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('idle');
+
+      // Prepare template parameters for EmailJS
+      const templateParams: EmailTemplateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+        to_email: EMAILJS_CONFIG.TO_EMAIL,
+        sent_date: new Date().toLocaleString('es-CL', {
+          timeZone: 'America/Santiago',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      };
+
+      // Send email using EmailJS
+      console.log('Sending email with config:', {
+        serviceId: EMAILJS_CONFIG.SERVICE_ID,
+        templateId: EMAILJS_CONFIG.TEMPLATE_ID,
+        publicKey: EMAILJS_CONFIG.PUBLIC_KEY
+      });
+
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      );
+
+      // Track successful submission
       Analytics.contactForm(data.subject);
-      alert(t('contact:form.success'));
+      setSubmitStatus('success');
       reset();
+
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+
     } catch (error) {
       console.error('Error sending message:', error);
+      setSubmitStatus('error');
+
+      // Auto-hide error message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
     }
   };
 
@@ -187,6 +231,21 @@ export default function Contact() {
                     </div>
                   )}
                 </button>
+
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                  <div className="flex items-center space-x-2 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span>{t('contact:form.success')}</span>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="flex items-center space-x-2 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                    <AlertCircle className="h-5 w-5 text-red-600" />
+                    <span>Error al enviar el mensaje. Por favor, intenta nuevamente o contacta directamente a contacto@fundacionalmare.cl</span>
+                  </div>
+                )}
               </form>
             </Card>
 
