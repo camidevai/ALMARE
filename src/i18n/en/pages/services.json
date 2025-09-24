@@ -1,27 +1,39 @@
 {
   "hero": {
-    "title": "Our Services",
-    "subtitle": "Programs and services designed to create lasting impact"
+    "title": "Almare Foundation Services",
+    "subtitle": "Specialized mental health and emotional wellness services to care for the mind and accompany the soul"
   },
-  "programs": {
-    "education": {
-      "title": "Education",
-      "description": "Educational programs for children and adults in rural communities"
+  "services": {
+    "workshops": {
+      "title": "Psychology workshops and educational programs",
+      "description": "We conduct workshops and programs designed to educate and empower people in caring for their mental and emotional health, providing practical and reflective tools they can apply in their daily lives."
     },
-    "health": {
-      "title": "Health",
-      "description": "Basic medical care and prevention programs"
+    "talks": {
+      "title": "Awareness talks and seminars",
+      "description": "We organize talks and seminars that seek to create safe spaces for learning, awareness, and dialogue about the importance of mental health and emotional well-being."
     },
-    "development": {
-      "title": "Community Development",
-      "description": "Infrastructure projects and local economic development"
+    "consulting": {
+      "title": "Comprehensive psychology consulting",
+      "description": "We offer personalized professional guidance, addressing mental health comprehensively, helping each person find balance, understanding, and emotional well-being."
     },
-    "participate": "Join this program"
+    "support": {
+      "title": "Individual and group psychological support services",
+      "description": "We provide both individual and group psychological care, offering containment, active listening, and professional accompaniment so each person can express themselves freely and receive guidance in their emotional process."
+    },
+    "holistic": {
+      "title": "Holistic guidance and occupational therapies",
+      "description": "We facilitate comprehensive accompaniment that integrates body, mind, and emotions, promoting personal development and well-being through therapies and guidance adapted to each need."
+    },
+    "information": {
+      "title": "Mental health information dissemination and provision",
+      "description": "We make reliable and accessible information about psychology, emotional well-being, and self-care available, with the goal of educating, preventing, and empowering the community."
+    },
+    "participate": "Access this service"
   },
   "cta": {
-    "title": "Want to be part of the change?",
-    "description": "Join us as a volunteer or make a donation to support our programs.",
-    "volunteer": "Become a Volunteer",
-    "donate": "Donate"
+    "title": "Need support or want to be part of the change?",
+    "description": "Contact us to access our mental health services or join as a volunteer to help others in their emotional well-being.",
+    "contact": "Contact Us",
+    "volunteer": "Become a Volunteer"
   }
 }

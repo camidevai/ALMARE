@@ -5,7 +5,7 @@ import HeroSection from '../components/HeroSection';
 import Card from '../components/Card';
 import { generatePageSEO } from '../lib/seo';
 import { Analytics } from '../lib/analytics';
-import { Eye, Target, Users, Leaf } from 'lucide-react';
+import { Heart, Shield, HandHeart, Target, Users, Eye, Lightbulb, Brain } from 'lucide-react';
 
 export default function About() {
   const { t } = useTranslation(['about', 'common']);
@@ -21,24 +21,44 @@ export default function About() {
 
   const values = [
     {
-      icon: Eye,
-      title: t('about:values.transparency'),
-      description: 'Mantenemos total transparencia en el uso de recursos y resultados.',
+      icon: Heart,
+      title: t('about:values.empathy.title'),
+      description: t('about:values.empathy.description'),
+    },
+    {
+      icon: Shield,
+      title: t('about:values.respect.title'),
+      description: t('about:values.respect.description'),
+    },
+    {
+      icon: HandHeart,
+      title: t('about:values.accompaniment.title'),
+      description: t('about:values.accompaniment.description'),
     },
     {
       icon: Target,
-      title: t('about:values.impact'),
-      description: 'Nos enfocamos en generar cambios reales y medibles en las comunidades.',
+      title: t('about:values.commitment.title'),
+      description: t('about:values.commitment.description'),
     },
     {
       icon: Users,
-      title: t('about:values.community'),
-      description: 'Trabajamos con y para las comunidades, respetando su cultura y necesidades.',
+      title: t('about:values.inclusion.title'),
+      description: t('about:values.inclusion.description'),
     },
     {
-      icon: Leaf,
-      title: t('about:values.sustainability'),
-      description: 'Buscamos soluciones sostenibles que perduren en el tiempo.',
+      icon: Eye,
+      title: t('about:values.transparency.title'),
+      description: t('about:values.transparency.description'),
+    },
+    {
+      icon: Lightbulb,
+      title: t('about:values.hope.title'),
+      description: t('about:values.hope.description'),
+    },
+    {
+      icon: Brain,
+      title: t('about:values.awareness.title'),
+      description: t('about:values.awareness.description'),
     },
   ];
 
@@ -90,7 +110,7 @@ export default function About() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             {t('about:values.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (

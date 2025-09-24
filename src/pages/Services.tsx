@@ -6,7 +6,7 @@ import HeroSection from '../components/HeroSection';
 import Card from '../components/Card';
 import { generatePageSEO } from '../lib/seo';
 import { Analytics } from '../lib/analytics';
-import { GraduationCap, Heart, Building } from 'lucide-react';
+import { BookOpen, Users, UserCheck, HeartHandshake, Sparkles, Info } from 'lucide-react';
 
 export default function Services() {
   const { t } = useTranslation(['services', 'common']);
@@ -20,24 +20,42 @@ export default function Services() {
     description: t('services:hero.subtitle'),
   });
 
-  const programs = [
+  const services = [
     {
-      icon: GraduationCap,
-      title: t('services:programs.education.title'),
-      description: t('services:programs.education.description'),
-      image: 'https://images.pexels.com/photos/8926553/pexels-photo-8926553.jpeg',
+      icon: BookOpen,
+      title: t('services:services.workshops.title'),
+      description: t('services:services.workshops.description'),
+      image: 'https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg',
     },
     {
-      icon: Heart,
-      title: t('services:programs.health.title'),
-      description: t('services:programs.health.description'),
-      image: 'https://images.pexels.com/photos/6975474/pexels-photo-6975474.jpeg',
+      icon: Users,
+      title: t('services:services.talks.title'),
+      description: t('services:services.talks.description'),
+      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
     },
     {
-      icon: Building,
-      title: t('services:programs.development.title'),
-      description: t('services:programs.development.description'),
-      image: 'https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg',
+      icon: UserCheck,
+      title: t('services:services.consulting.title'),
+      description: t('services:services.consulting.description'),
+      image: 'https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg',
+    },
+    {
+      icon: HeartHandshake,
+      title: t('services:services.support.title'),
+      description: t('services:services.support.description'),
+      image: 'https://images.pexels.com/photos/7176319/pexels-photo-7176319.jpeg',
+    },
+    {
+      icon: Sparkles,
+      title: t('services:services.holistic.title'),
+      description: t('services:services.holistic.description'),
+      image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg',
+    },
+    {
+      icon: Info,
+      title: t('services:services.information.title'),
+      description: t('services:services.information.description'),
+      image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg',
     },
   ];
 
@@ -51,14 +69,14 @@ export default function Services() {
         backgroundImage="https://subir-imagen.com/images/2025/09/04/download1fc9cc694c46ca51.jpg"
       />
 
-      {/* Programs */}
+      {/* Services */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
-            {programs.map((program, index) => {
-              const IconComponent = program.icon;
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
               const isReversed = index % 2 === 1;
-              
+
               return (
                 <div
                   key={index}
@@ -72,23 +90,23 @@ export default function Services() {
                         <IconComponent className="h-6 w-6 text-blue-600" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900">
-                        {program.title}
+                        {service.title}
                       </h3>
                     </div>
                     <p className="text-lg text-gray-600 mb-6">
-                      {program.description}
+                      {service.description}
                     </p>
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                     >
-                      {t('services:programs.participate')} →
+                      {t('services:services.participate')} →
                     </Link>
                   </div>
                   <div className={isReversed ? 'lg:col-start-1' : ''}>
                     <img
-                      src={program.image}
-                      alt={program.title}
+                      src={service.image}
+                      alt={service.title}
                       className="rounded-lg shadow-lg"
                     />
                   </div>
@@ -113,13 +131,13 @@ export default function Services() {
               to="/contact"
               className="px-8 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-50 transition-colors"
             >
-              {t('services:cta.volunteer')}
+              {t('services:cta.contact')}
             </Link>
             <Link
-              to="/donations"
+              to="/contact"
               className="px-8 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >
-              {t('services:cta.donate')}
+              {t('services:cta.volunteer')}
             </Link>
           </div>
         </div>

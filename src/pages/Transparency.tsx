@@ -5,7 +5,7 @@ import HeroSection from '../components/HeroSection';
 import Card from '../components/Card';
 import { generatePageSEO } from '../lib/seo';
 import { Analytics } from '../lib/analytics';
-import { DollarSign, Download, TrendingUp, CheckCircle } from 'lucide-react';
+import { DollarSign, Download, TrendingUp, CheckCircle, Target, Heart, Users } from 'lucide-react';
 
 export default function Transparency() {
   const { t } = useTranslation(['transparency', 'common']);
@@ -23,31 +23,48 @@ export default function Transparency() {
     {
       icon: DollarSign,
       label: t('transparency:financials.totalDonations'),
-      value: '€0',
-      change: '+12%',
+      value: '$0',
+      change: 'Iniciando',
+    },
+    {
+      icon: Target,
+      label: t('transparency:financials.targetGoal'),
+      value: '$50,000',
+      change: 'Meta inicial',
     },
     {
       icon: TrendingUp,
       label: t('transparency:financials.programExpenses'),
-      value: '0%',
-      change: 'del total',
+      value: '85%',
+      change: 'Proyectado',
     },
     {
       icon: CheckCircle,
       label: t('transparency:financials.adminCosts'),
-      value: '0%',
-      change: 'eficiencia',
+      value: '15%',
+      change: 'Máximo',
     },
   ];
 
   const projects = [
     {
-      name: '',
-      status: '',
-      budget: '',
-      progress: "",
-    }
-  
+      name: 'Talleres de Bienestar Emocional',
+      status: 'inDevelopment',
+      budget: '$15,000',
+      progress: 25,
+    },
+    {
+      name: 'Programa de Apoyo Psicológico Grupal',
+      status: 'planned',
+      budget: '$20,000',
+      progress: 10,
+    },
+    {
+      name: 'Seminarios de Concientización en Salud Mental',
+      status: 'inDevelopment',
+      budget: '$8,000',
+      progress: 40,
+    },
   ];
 
   return (
@@ -59,6 +76,36 @@ export default function Transparency() {
         subtitle={t('transparency:hero.subtitle')}
         backgroundImage="https://subir-imagen.com/images/2025/09/04/download30275424eb7ff8f1.jpg"
       />
+
+      {/* Commitment to Transparency */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Heart className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              {t('transparency:commitment.title')}
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              {t('transparency:commitment.description')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Status */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              {t('transparency:currentStatus.title')}
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              {t('transparency:currentStatus.description')}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Financial Overview */}
       <section className="py-16">
@@ -93,12 +140,17 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Active Projects */}
+      {/* Programs in Development */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            {t('transparency:projects.title')}
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t('transparency:projects.title')}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              {t('transparency:projects.description')}
+            </p>
+          </div>
           <div className="space-y-6">
             {projects.map((project, index) => (
               <Card key={index}>
@@ -108,15 +160,19 @@ export default function Transparency() {
                       {project.name}
                     </h3>
                     <div className="flex items-center space-x-4 text-sm text-gray-600">
-                      <span>Presupuesto: {project.budget}</span>
+                      <span>Presupuesto estimado: {project.budget}</span>
                       <span className={`px-2 py-1 rounded-full text-xs ${
-                        project.status === 'completed'
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-yellow-100 text-yellow-800'
+                        project.status === 'inDevelopment'
+                          ? 'bg-blue-100 text-blue-800'
+                          : project.status === 'planned'
+                          ? 'bg-yellow-100 text-yellow-800'
+                          : 'bg-green-100 text-green-800'
                       }`}>
-                        {project.status === 'completed' 
-                          ? t('transparency:projects.completed')
-                          : t('transparency:projects.inProgress')
+                        {project.status === 'inDevelopment'
+                          ? t('transparency:projects.inDevelopment')
+                          : project.status === 'planned'
+                          ? t('transparency:projects.planned')
+                          : t('transparency:projects.completed')
                         }
                       </span>
                     </div>
@@ -124,7 +180,7 @@ export default function Transparency() {
                   <div className="flex items-center space-x-4">
                     <div className="w-32">
                       <div className="flex justify-between text-xs text-gray-600 mb-1">
-                        <span>Progreso</span>
+                        <span>Desarrollo</span>
                         <span>{project.progress}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
