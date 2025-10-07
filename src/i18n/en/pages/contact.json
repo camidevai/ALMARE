@@ -67,7 +67,7 @@
     },
     "tax": {
       "question": "Are donations tax deductible?",
-      "answer": "Yes, we are a registered organization. We'll provide you with a donation certificate for your tax deductions."
+      "answer": "We currently cannot issue donation certificates for tax deductions because Chilean law requires organizations to have at least 1 year of operational history to offer this tax benefit. We are working to meet this requirement in the future."
     },
     "visits": {
       "question": "Can I visit the projects?",

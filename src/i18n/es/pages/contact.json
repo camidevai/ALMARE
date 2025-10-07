@@ -67,7 +67,7 @@
     },
     "tax": {
       "question": "¿Las donaciones son deducibles de impuestos?",
-      "answer": "Sí, somos una organización registrada. Te proporcionaremos un certificado de donación para tus deducciones fiscales."
+      "answer": "Actualmente no podemos emitir certificados de donación para deducciones fiscales debido a que la ley chilena requiere que las organizaciones tengan al menos 1 año de antigüedad para poder ofrecer este beneficio tributario. Estamos trabajando para cumplir con este requisito en el futuro."
     },
     "visits": {
       "question": "¿Puedo visitar los proyectos?",
