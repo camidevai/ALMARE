@@ -6,7 +6,7 @@ import HeroSection from '../components/HeroSection';
 import Card from '../components/Card';
 import { generatePageSEO } from '../lib/seo';
 import { Analytics } from '../lib/analytics';
-import { BookOpen, Users, UserCheck, HeartHandshake, Sparkles, Info } from 'lucide-react';
+import { BookOpen, Users, UserCheck, HeartHandshake, Sparkles, Info, Coffee } from 'lucide-react';
 
 export default function Services() {
   const { t } = useTranslation(['services', 'common']);
@@ -56,6 +56,12 @@ export default function Services() {
       title: t('services:services.information.title'),
       description: t('services:services.information.description'),
       image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg',
+    },
+    {
+      icon: Coffee,
+      title: t('services:services.almareTeaProgram.title'),
+      description: t('services:services.almareTeaProgram.description'),
+      image: 'https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg',
     },
   ];
 

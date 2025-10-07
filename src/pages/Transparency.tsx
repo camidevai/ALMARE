@@ -29,7 +29,7 @@ export default function Transparency() {
     {
       icon: Target,
       label: t('transparency:financials.targetGoal'),
-      value: '$140,000 USD',
+      value: 'Aproximadamente $140,000 USD',
       change: 'Meta inicial',
     },
     {
