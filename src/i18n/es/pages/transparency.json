@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Transparencia",
+    "subtitle": "Conoce nuestro compromiso con la honestidad y el estado actual de nuestros proyectos"
+  },
+  "commitment": {
+    "title": "Compromiso con la transparencia",
+    "description": "En Fundación Almare creemos que la confianza se construye desde la honestidad. Nuestro compromiso es mantener informada a la comunidad sobre cada paso que damos, desde la planificación de proyectos hasta la ejecución de nuestras actividades."
+  },
+  "currentStatus": {
+    "title": "Explicación del estado actual del proyecto",
+    "description": "Actualmente estamos en proceso de recaudar los fondos necesarios para iniciar nuestros primeros programas y talleres de apoyo emocional y salud mental. Cada recurso que recibamos será utilizado de manera responsable para cumplir nuestra misión."
+  },
+  "financials": {
+    "title": "Estado Financiero Inicial",
+    "totalDonations": "Fondos Recaudados",
+    "targetGoal": "Meta Inicial",
+    "programExpenses": "Gastos en Programas",
+    "adminCosts": "Costos Administrativos",
+    "downloadReport": "Descargar Informe de Transparencia"
+  },
+  "projects": {
+    "title": "Programas en Desarrollo",
+    "inDevelopment": "En Desarrollo",
+    "planned": "Planificados",
+    "description": "Nuestros programas de salud mental están siendo cuidadosamente diseñados para brindar el mejor apoyo posible a nuestra comunidad."
+  }
+}

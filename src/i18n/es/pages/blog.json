@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "title": "Blog",
+    "subtitle": "Historias, noticias y actualizaciones de nuestro trabajo en el terreno"
+  },
+  "categories": {
+    "all": "Todos",
+    "education": "Educación",
+    "health": "Salud",
+    "community": "Comunidad",
+    "transparency": "Transparencia",
+    "infrastructure": "Infraestructura",
+    "development": "Desarrollo"
+  },
+  "post": {
+    "readMore": "Leer más",
+    "backToBlog": "Volver al blog",
+    "relatedPosts": "Artículos relacionados",
+    "cta": {
+      "title": "¿Te inspiró esta historia?",
+      "description": "Tu apoyo hace posible que podamos continuar con proyectos como este. Cada donación, por pequeña que sea, marca la diferencia."
+    }
+  },
+  "empty": "No hay artículos en esta categoría."
+}

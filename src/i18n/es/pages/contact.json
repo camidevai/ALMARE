@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Contacto",
+    "subtitle": "Ponte en contacto con nosotros para cualquier consulta o para unirte como voluntario"
+  },
+  "form": {
+    "title": "Envíanos un mensaje",
+    "name": "Nombre",
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "namePlaceholder": "Tu nombre completo",
+    "emailPlaceholder": "tu@email.com",
+    "subjectPlaceholder": "¿En qué te podemos ayudar?",
+    "messagePlaceholder": "Cuéntanos más detalles sobre tu consulta o interés...",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado correctamente! Te responderemos pronto."
+  },
+  "info": {
+    "title": "Información de contacto",
+    "email": {
+      "title": "Email",
+      "value": "contacto@fundacionalmare.cl",
+      "description": "Respuesta en 24 horas"
+    },
+    "phone": {
+      "title": "Teléfono",
+      "value": "+56 9 2182 2215",
+      "description": "Lunes a Viernes, 9:00 - 18:00"
+    },
+    "office": {
+      "title": "Oficina",
+      "value": "Santiago, Chile",
+      "description": "Cita previa necesaria"
+    }
+  },
+  "volunteer": {
+    "title": "Oportunidades de voluntariado",
+    "field": {
+      "title": "Voluntariado en terreno",
+      "description": "Participa directamente en nuestros proyectos comunitarios"
+    },
+    "admin": {
+      "title": "Apoyo administrativo",
+      "description": "Ayuda con tareas de organización y gestión desde casa"
+    },
+    "events": {
+      "title": "Eventos especiales",
+      "description": "Colabora en nuestros eventos de recaudación y difusión"
+    },
+    "note": "¿Interesado en ser voluntario? Incluye \"Voluntariado\" en el asunto de tu mensaje."
+  },
+  "schedule": {
+    "title": "Horarios de atención",
+    "weekdays": "Lunes - Viernes",
+    "saturday": "Sábados",
+    "sunday": "Domingos",
+    "closed": "Cerrado",
+    "weekdaysTime": "9:00 - 18:00",
+    "saturdayTime": "10:00 - 14:00"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "volunteer": {
+      "question": "¿Cómo puedo ser voluntario?",
+      "answer": "Envíanos un mensaje con el asunto \"Voluntariado\" y te contactaremos para explicarte las oportunidades disponibles y el proceso de inscripción."
+    },
+    "tax": {
+      "question": "¿Las donaciones son deducibles de impuestos?",
+      "answer": "Sí, somos una organización registrada. Te proporcionaremos un certificado de donación para tus deducciones fiscales."
+    },
+    "visits": {
+      "question": "¿Puedo visitar los proyectos?",
+      "answer": "Organizamos visitas guiadas a nuestros proyectos para donantes y voluntarios. Contáctanos para coordinar una visita."
+    },
+    "transparency": {
+      "question": "¿Cómo garantizan la transparencia?",
+      "answer": "Publicamos informes anuales detallados y mantenemos una política de puertas abiertas. Visita nuestra sección de transparencia para más información."
+    }
+  }
+}

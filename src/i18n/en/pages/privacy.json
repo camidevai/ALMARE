@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy is important to us. Learn how we protect and handle your personal information."
+  },
+  "introduction": {
+    "title": "Commitment to Your Privacy",
+    "lastUpdated": "Last updated: September 4, 2025",
+    "content1": "At Almare, we respect and protect the privacy of our users, donors, and volunteers. This Privacy Policy describes how we collect, use, store, and protect your personal information in accordance with applicable Chilean legislation, including Law No. 19,628 on Protection of Private Life and its amendments.",
+    "content2": "By using our services, website, or interacting with our organization, you accept the practices described in this policy."
+  },
+  "dataCollection": {
+    "title": "Information We Collect",
+    "types": {
+      "identification": {
+        "title": "Identification Data",
+        "description": "Full name, RUT, address, phone number, and email address."
+      },
+      "navigation": {
+        "title": "Navigation Data",
+        "description": "Information about your use of the website, cookies, and preferences."
+      },
+      "communication": {
+        "title": "Communication Data",
+        "description": "Messages, inquiries, and communications you send us."
+      }
+    },
+    "purposes": {
+      "title": "Processing Purposes",
+      "donations": "Donation management: Process and administer your financial contributions.",
+      "communication": "Communication: Respond to inquiries, send updates about our projects.",
+      "volunteering": "Volunteering: Coordinate volunteer activities and maintain contact with volunteers.",
+      "transparency": "Transparency: Comply with legal transparency and accountability obligations.",
+      "improvement": "Service improvement: Analyze website usage to improve user experience."
+    }
+  },
+  "security": {
+    "title": "Information Security",
+    "description": "We implement appropriate technical and organizational measures to protect your personal information:",
+    "measures": {
+      "encryption": "SSL/TLS encryption for all data transmissions",
+      "access": "Restricted access to personal information only to authorized personnel",
+      "backup": "Data backup and recovery systems",
+      "audits": "Regular security audits",
+      "training": "Continuous staff training on data protection"
+    }
+  },
+  "retention": {
+    "title": "Data Retention",
+    "description": "We retain your personal information only for the time necessary to:",
+    "purposes": {
+      "fulfillment": "Fulfill the purposes for which it was collected",
+      "legal": "Satisfy legal, accounting, and tax obligations (minimum 6 years)",
+      "disputes": "Resolve disputes and enforce our agreements"
+    },
+    "deletion": "After this period, we will proceed with the secure deletion of the information."
+  },
+  "rights": {
+    "title": "Your Rights",
+    "access": {
+      "title": "Right of Access",
+      "description": "You can request information about what personal data we have about you."
+    },
+    "rectification": {
+      "title": "Right of Rectification",
+      "description": "You can request the correction of inaccurate or incomplete data."
+    },
+    "cancellation": {
+      "title": "Right of Cancellation",
+      "description": "You can request the deletion of your personal data."
+    },
+    "opposition": {
+      "title": "Right of Opposition",
+      "description": "You can object to the processing of your data for specific purposes."
+    },
+    "exercise": {
+      "title": "How to Exercise Your Rights",
+      "description": "To exercise any of these rights, you can contact us through:",
+      "email": "Email: privacidad@almare.org",
+      "address": "Address: Santiago, Chile",
+      "phone": "Phone: +56 2 1234 5678",
+      "response": "We will respond to your request within 8 business days, in accordance with Chilean legislation."
+    }
+  }
+}

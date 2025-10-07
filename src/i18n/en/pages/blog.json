@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "title": "Blog",
+    "subtitle": "Stories, news and updates from our work in the field"
+  },
+  "categories": {
+    "all": "All",
+    "education": "Education",
+    "health": "Health",
+    "community": "Community",
+    "transparency": "Transparency",
+    "infrastructure": "Infrastructure",
+    "development": "Development"
+  },
+  "post": {
+    "readMore": "Read more",
+    "backToBlog": "Back to blog",
+    "relatedPosts": "Related articles",
+    "cta": {
+      "title": "Did this story inspire you?",
+      "description": "Your support makes it possible for us to continue with projects like this. Every donation, no matter how small, makes a difference."
+    }
+  },
+  "empty": "No articles in this category."
+}

@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "title": "About Almare",
+    "subtitle": "Learn about our story, values, and the team making change possible"
+  },
+  "story": {
+    "title": "Our Story",
+    "description": "At Almare Foundation, we believe that every person deserves to be heard, understood, and accompanied in their most difficult moments. Our mission stems from a deep commitment to caring for the mental and emotional health of each individual, regardless of their age, gender, or social condition.\n\nWe are a young Chilean foundation with big dreams: we want to reach every corner of the country and the world, bringing support, guidance, and containment to those who need it most. Every workshop, every talk, and every service we offer is born from the genuine desire to make a real difference in people's lives.\n\nOur work is not limited to psychological care: we seek to educate, raise awareness, and make visible the importance of emotional well-being. We believe that understanding the mind and caring for the soul are fundamental pillars for building healthier and more resilient communities.\n\nAt Almare, every action has a purpose: to build bridges of empathy, offer self-care tools, and open spaces where people feel safe to express their emotions. Every story that comes to us inspires us to keep growing and expanding our reach, with the hope that no individual feels alone facing their challenges.\n\nWe care for the mind, we accompany the soul. That is not just our motto; it is the essence of everything we do. With each project, we seek to sow support, understanding, and hope, because we know that a heart that is heard and accompanied can transform its world."
+  },
+  "values": {
+    "title": "Our Values",
+    "empathy": {
+      "title": "Empathy",
+      "description": "We put our heart into listening and understanding each person, respecting their story, emotions, and experiences."
+    },
+    "respect": {
+      "title": "Respect",
+      "description": "We value diversity and individuality, recognizing that every human being has the right to be treated with dignity and consideration."
+    },
+    "accompaniment": {
+      "title": "Accompaniment",
+      "description": "We leave no one alone: we are present in difficult moments, offering guidance, containment, and constant support."
+    },
+    "commitment": {
+      "title": "Commitment",
+      "description": "We work with dedication and responsibility to generate real impact on people's mental and emotional health."
+    },
+    "inclusion": {
+      "title": "Inclusion",
+      "description": "We believe that mental health does not discriminate; we seek to ensure everyone has access to our services, regardless of age, gender, or social condition."
+    },
+    "transparency": {
+      "title": "Transparency",
+      "description": "We act with honesty and clarity in every action, decision, and project, ensuring that our resources and efforts are always at the service of those we help."
+    },
+    "hope": {
+      "title": "Hope",
+      "description": "Every action and project we undertake aims to restore confidence and hope to those going through difficulties, reminding them that there is always a way out and accompaniment."
+    },
+    "awareness": {
+      "title": "Awareness and Sensitization",
+      "description": "We promote education and visibility of mental health, creating more empathetic and resilient communities."
+    }
+  },
+  "team": {
+    "title": "Our Team"
+  }
+}

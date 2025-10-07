@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "title": "Sobre Almare",
+    "subtitle": "Conoce nuestra historia, valores y el equipo que hace posible el cambio"
+  },
+  "story": {
+    "title": "Nuestra Historia",
+    "description": "En Fundación Almare creemos que toda persona merece ser escuchada, comprendida y acompañada en sus momentos más difíciles. Nuestra misión nace del profundo compromiso de cuidar la salud mental y emocional de cada individuo, sin importar su edad, género o condición social.\n\nSomos una fundación joven, chilena, con grandes sueños: queremos llegar a todos los rincones del país y del mundo, llevando apoyo, orientación y contención a quienes más lo necesitan. Cada taller, cada charla y cada servicio que ofrecemos nace del deseo genuino de marcar una diferencia real en la vida de las personas.\n\nNuestro trabajo no se limita a la atención psicológica: buscamos educar, concientizar y visibilizar la importancia del bienestar emocional. Creemos que comprender la mente y cuidar el alma son pilares fundamentales para construir comunidades más saludables y resilientes.\n\nEn Almare, cada acción tiene un propósito: tender puentes de empatía, ofrecer herramientas de autocuidado y abrir espacios donde las personas se sientan seguras para expresar sus emociones. Cada historia que llega a nosotros nos inspira a seguir creciendo y a expandir nuestro alcance, con la esperanza de que ningún individuo se sienta solo frente a sus desafíos.\n\nCuidamos la mente, acompañamos el alma. Ese no es solo nuestro lema; es la esencia de todo lo que hacemos. Con cada proyecto, buscamos sembrar apoyo, comprensión y esperanza, porque sabemos que un corazón escuchado y acompañado puede transformar su mundo."
+  },
+  "values": {
+    "title": "Nuestros Valores",
+    "empathy": {
+      "title": "Empatía",
+      "description": "Ponemos el corazón en escuchar y comprender a cada persona, respetando su historia, emociones y experiencias."
+    },
+    "respect": {
+      "title": "Respeto",
+      "description": "Valoramos la diversidad y la individualidad, reconociendo que cada ser humano tiene derecho a ser tratado con dignidad y consideración."
+    },
+    "accompaniment": {
+      "title": "Acompañamiento",
+      "description": "No dejamos a nadie solo: estamos presentes en los momentos difíciles, ofreciendo guía, contención y apoyo constante."
+    },
+    "commitment": {
+      "title": "Compromiso",
+      "description": "Trabajamos con dedicación y responsabilidad para generar un impacto real en la salud mental y emocional de las personas."
+    },
+    "inclusion": {
+      "title": "Inclusión",
+      "description": "Creemos que la salud mental no discrimina; buscamos que todos tengan acceso a nuestros servicios, sin importar edad, género o condición social."
+    },
+    "transparency": {
+      "title": "Transparencia",
+      "description": "Actuamos con honestidad y claridad en cada acción, decisión y proyecto, asegurando que nuestros recursos y esfuerzos estén siempre al servicio de quienes ayudamos."
+    },
+    "hope": {
+      "title": "Esperanza",
+      "description": "Cada acción y proyecto que emprendemos tiene como objetivo devolver la confianza y la ilusión a quienes atraviesan dificultades, recordándoles que siempre hay salida y acompañamiento."
+    },
+    "awareness": {
+      "title": "Conciencia y sensibilización",
+      "description": "Promovemos la educación y la visibilización de la salud mental, creando comunidades más empáticas y resilientes."
+    }
+  },
+  "team": {
+    "title": "Nuestro Equipo"
+  }
+}

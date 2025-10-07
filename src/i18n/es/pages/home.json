@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "Cuidamos la mente, acompañamos el alma.",
+    "subtitle": "Únete a nuestra misión de crear un impacto positivo en las comunidades más vulnerables",
+    "cta": "Que es almare"
+  },
+  "impact": {
+    "title": "Nuestro Impacto",
+    "familiesHelped": "Familias Ayudadas",
+    "projectsCompleted": "Proyectos Completados",
+    "volunteersActive": "Voluntarios Activos",
+    "yearsOfWork": "Años de Trabajo"
+  },
+  "mission": {
+    "title": "Nuestra Misión",
+    "description": "Trabajamos incansablemente para mejorar las condiciones de vida de las comunidades más desfavorecidas, proporcionando acceso a educación, salud y oportunidades de desarrollo sostenible."
+  },
+  "actions": {
+    "donate": {
+      "title": "Donar",
+      "description": "Tu donación nos ayuda a continuar nuestro trabajo en las comunidades.",
+      "cta": "Donar"
+    },
+    "volunteer": {
+      "title": "Voluntariado",
+      "description": "Únete a nuestro equipo de voluntarios y marca la diferencia.",
+      "cta": "Únete"
+    },
+    "transparency": {
+      "title": "Transparencia",
+      "description": "Descubre cómo utilizamos los recursos y el impacto que generamos.",
+      "cta": "Ver Informes"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "Transforming Lives, Building Hope",
+    "subtitle": "Join our mission to create positive impact in the most vulnerable communities",
+    "cta": "Learn About Our Work"
+  },
+  "impact": {
+    "title": "Our Impact",
+    "familiesHelped": "Families Helped",
+    "projectsCompleted": "Projects Completed",
+    "volunteersActive": "Active Volunteers",
+    "yearsOfWork": "Years of Work"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "We work tirelessly to improve living conditions for the most disadvantaged communities, providing access to education, healthcare, and sustainable development opportunities."
+  },
+  "actions": {
+    "donate": {
+      "title": "Donate",
+      "description": "Your donation helps us continue our work in communities.",
+      "cta": "Donate"
+    },
+    "volunteer": {
+      "title": "Volunteer",
+      "description": "Join our team of volunteers and make a difference.",
+      "cta": "Join Us"
+    },
+    "transparency": {
+      "title": "Transparency",
+      "description": "Discover how we use resources and the impact we generate.",
+      "cta": "View Reports"
+    }
+  }
+}

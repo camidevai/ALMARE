@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Servicios de Fundación Almare",
+    "subtitle": "Servicios especializados en salud mental y bienestar emocional para cuidar la mente y acompañar el alma"
+  },
+  "services": {
+    "workshops": {
+      "title": "Talleres y programas educativos en psicología",
+      "description": "Realizamos talleres y programas diseñados para educar y empoderar a las personas en el cuidado de su salud mental y emocional, entregando herramientas prácticas y reflexivas que pueden aplicar en su vida diaria."
+    },
+    "talks": {
+      "title": "Charlas y seminarios de concientización",
+      "description": "Organizamos charlas y seminarios que buscan generar espacios seguros de aprendizaje, sensibilización y diálogo sobre la importancia de la salud mental y el bienestar emocional."
+    },
+    "consulting": {
+      "title": "Consultoría en psicología integral",
+      "description": "Ofrecemos orientación profesional personalizada, abordando la salud mental de manera integral, ayudando a cada persona a encontrar equilibrio, comprensión y bienestar emocional."
+    },
+    "support": {
+      "title": "Servicios de apoyo psicológico individual y grupal",
+      "description": "Brindamos atención psicológica tanto individual como grupal, ofreciendo contención, escucha activa y acompañamiento profesional para que cada persona pueda expresarse libremente y recibir guía en su proceso emocional."
+    },
+    "holistic": {
+      "title": "Orientación holística y terapias ocupacionales",
+      "description": "Facilitamos un acompañamiento integral que integra cuerpo, mente y emociones, promoviendo el desarrollo personal y el bienestar a través de terapias y orientaciones adaptadas a cada necesidad."
+    },
+    "information": {
+      "title": "Difusión y suministro de información sobre salud mental",
+      "description": "Ponemos a disposición información confiable y accesible sobre psicología, bienestar emocional y autocuidado, con el objetivo de educar, prevenir y empoderar a la comunidad."
+    },
+    "participate": "Acceder a este servicio"
+  },
+  "cta": {
+    "title": "¿Necesitas apoyo o quieres ser parte del cambio?",
+    "description": "Contáctanos para acceder a nuestros servicios de salud mental o únete como voluntario para ayudar a otros en su bienestar emocional.",
+    "contact": "Contactar",
+    "volunteer": "Ser Voluntario"
+  }
+}

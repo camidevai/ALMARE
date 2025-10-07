@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Transparency",
+    "subtitle": "Learn about our commitment to honesty and the current status of our projects"
+  },
+  "commitment": {
+    "title": "Commitment to Transparency",
+    "description": "At Almare Foundation, we believe that trust is built through honesty. Our commitment is to keep the community informed about every step we take, from project planning to the execution of our activities."
+  },
+  "currentStatus": {
+    "title": "Current Project Status Explanation",
+    "description": "We are currently in the process of raising the necessary funds to launch our first emotional support and mental health programs and workshops. Every resource we receive will be used responsibly to fulfill our mission."
+  },
+  "financials": {
+    "title": "Initial Financial Status",
+    "totalDonations": "Funds Raised",
+    "targetGoal": "Initial Goal",
+    "programExpenses": "Program Expenses",
+    "adminCosts": "Administrative Costs",
+    "downloadReport": "Download Transparency Report"
+  },
+  "projects": {
+    "title": "Programs in Development",
+    "inDevelopment": "In Development",
+    "planned": "Planned",
+    "description": "Our mental health programs are being carefully designed to provide the best possible support to our community."
+  }
+}

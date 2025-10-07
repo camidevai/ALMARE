@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Contact",
+    "subtitle": "Get in touch with us for any inquiry or to join as a volunteer"
+  },
+  "form": {
+    "title": "Send us a message",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "How can we help you?",
+    "messagePlaceholder": "Tell us more details about your inquiry or interest...",
+    "sending": "Sending...",
+    "success": "Message sent successfully! We'll respond soon."
+  },
+  "info": {
+    "title": "Contact information",
+    "email": {
+      "title": "Email",
+      "value": "contacto@fundacionalmare.cl",
+      "description": "24-hour response"
+    },
+    "phone": {
+      "title": "Phone",
+      "value": "+56 9 2182 2215",
+      "description": "Monday to Friday, 9:00 - 18:00"
+    },
+    "office": {
+      "title": "Office",
+      "value": "Santiago, Chile",
+      "description": "Appointment required"
+    }
+  },
+  "volunteer": {
+    "title": "Volunteer opportunities",
+    "field": {
+      "title": "Field volunteering",
+      "description": "Participate directly in our community projects"
+    },
+    "admin": {
+      "title": "Administrative support",
+      "description": "Help with organization and management tasks from home"
+    },
+    "events": {
+      "title": "Special events",
+      "description": "Collaborate in our fundraising and outreach events"
+    },
+    "note": "Interested in volunteering? Include \"Volunteering\" in your message subject."
+  },
+  "schedule": {
+    "title": "Office hours",
+    "weekdays": "Monday - Friday",
+    "saturday": "Saturdays",
+    "sunday": "Sundays",
+    "closed": "Closed",
+    "weekdaysTime": "9:00 - 18:00",
+    "saturdayTime": "10:00 - 14:00"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "volunteer": {
+      "question": "How can I become a volunteer?",
+      "answer": "Send us a message with the subject \"Volunteering\" and we'll contact you to explain available opportunities and the registration process."
+    },
+    "tax": {
+      "question": "Are donations tax deductible?",
+      "answer": "Yes, we are a registered organization. We'll provide you with a donation certificate for your tax deductions."
+    },
+    "visits": {
+      "question": "Can I visit the projects?",
+      "answer": "We organize guided visits to our projects for donors and volunteers. Contact us to coordinate a visit."
+    },
+    "transparency": {
+      "question": "How do you guarantee transparency?",
+      "answer": "We publish detailed annual reports and maintain an open-door policy. Visit our transparency section for more information."
+    }
+  }
+}
