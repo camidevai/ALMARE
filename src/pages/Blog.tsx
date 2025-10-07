@@ -6,7 +6,7 @@ import HeroSection from '../components/HeroSection';
 import Card from '../components/Card';
 import { generatePageSEO } from '../lib/seo';
 import { Analytics } from '../lib/analytics';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function Blog() {
   const { t } = useTranslation(['blog', 'common']);
@@ -23,56 +23,56 @@ export default function Blog() {
 
   const posts = [
     {
-      slug: 'nueva-escuela-san-miguel',
-      title: 'Nueva escuela en San Miguel: Un sueño hecho realidad',
-      excerpt: 'Después de 8 meses de trabajo, inauguramos la nueva escuela que beneficiará a más de 200 niños en la comunidad de San Miguel.',
-      publishedAt: '2024-12-15',
-      author: 'María González',
+      slug: 'programa-bienestar-mental-2025',
+      title: 'Nuevo programa de bienestar mental comunitario 2025',
+      excerpt: 'Lanzamos nuestro programa integral de bienestar mental que incluye talleres, terapias grupales y apoyo psicológico para toda la familia.',
+      publishedAt: '2025-01-05',
+      author: 'Dra. Patricia Silva',
       image: 'https://images.pexels.com/photos/8926553/pexels-photo-8926553.jpeg',
-      category: 'Educación',
+      category: 'Salud',
     },
     {
-      slug: 'programa-nutricional-resultados',
-      title: 'Resultados del programa nutricional infantil',
-      excerpt: 'Los resultados de nuestro programa nutricional muestran una mejora significativa en el estado de salud de los niños participantes.',
-      publishedAt: '2024-12-01',
-      author: 'Dr. Carlos Rodríguez',
+      slug: 'talleres-mindfulness-comunidad',
+      title: 'Talleres de mindfulness transforman vidas en la comunidad',
+      excerpt: 'Los talleres de atención plena han ayudado a más de 150 personas a manejar mejor el estrés y la ansiedad en su vida diaria.',
+      publishedAt: '2024-12-20',
+      author: 'Carlos Mendoza',
       image: 'https://images.pexels.com/photos/6646832/pexels-photo-6646832.jpeg',
       category: 'Salud',
     },
     {
-      slug: 'voluntarios-construccion-centro-salud',
-      title: 'Voluntarios internacionales se unen a la construcción del centro de salud',
-      excerpt: 'Un grupo de 15 voluntarios de diferentes países llegó para apoyar la construcción de nuestro nuevo centro de salud comunitario.',
-      publishedAt: '2024-11-20',
+      slug: 'red-apoyo-familiar',
+      title: 'Red de apoyo familiar: Fortaleciendo vínculos comunitarios',
+      excerpt: 'Creamos una red de apoyo que conecta familias para compartir experiencias y estrategias de cuidado mental.',
+      publishedAt: '2024-12-10',
       author: 'Ana Martínez',
       image: 'https://images.pexels.com/photos/6975474/pexels-photo-6975474.jpeg',
       category: 'Comunidad',
     },
     {
-      slug: 'informe-transparencia-2024',
-      title: 'Informe de transparencia 2024: Nuestros logros y desafíos',
-      excerpt: 'Publicamos nuestro informe anual de transparencia donde detallamos todos nuestros proyectos, finanzas y el impacto generado.',
-      publishedAt: '2024-11-10',
+      slug: 'informe-impacto-2024',
+      title: 'Informe de impacto 2024: Transformando vidas juntos',
+      excerpt: 'Nuestro informe anual muestra cómo hemos impactado positivamente la vida de más de 1,200 personas este año.',
+      publishedAt: '2024-12-01',
       author: 'María González',
       image: 'https://subir-imagen.com/images/2025/09/04/download30275424eb7ff8f1.jpg',
       category: 'Transparencia',
     },
     {
-      slug: 'agua-potable-comunidad-rural',
-      title: 'Proyecto de agua potable lleva esperanza a comunidad rural',
-      excerpt: 'La instalación de un nuevo sistema de agua potable beneficia directamente a 450 personas en la comunidad de Valle Verde.',
-      publishedAt: '2024-10-28',
-      author: 'Carlos Rodríguez',
+      slug: 'centro-bienestar-inauguracion',
+      title: 'Inauguración del Centro de Bienestar Comunitario',
+      excerpt: 'Abrimos las puertas de nuestro nuevo centro que ofrecerá servicios integrales de apoyo psicológico y bienestar.',
+      publishedAt: '2024-11-15',
+      author: 'Dr. Roberto Flores',
       image: 'https://images.pexels.com/photos/6646860/pexels-photo-6646860.jpeg',
       category: 'Infraestructura',
     },
     {
-      slug: 'capacitacion-mujeres-emprendedoras',
-      title: 'Capacitación para mujeres emprendedoras genera nuevas oportunidades',
-      excerpt: 'Nuestro programa de capacitación empresarial ha ayudado a 30 mujeres a iniciar sus propios negocios locales.',
-      publishedAt: '2024-10-15',
-      author: 'Ana Martínez',
+      slug: 'capacitacion-lideres-comunitarios',
+      title: 'Capacitación en liderazgo para el bienestar comunitario',
+      excerpt: 'Formamos a 25 líderes comunitarios en técnicas de apoyo emocional y promoción del bienestar mental.',
+      publishedAt: '2024-11-01',
+      author: 'Sofía Ramírez',
       image: 'https://images.pexels.com/photos/6646848/pexels-photo-6646848.jpeg',
       category: 'Desarrollo',
     },
@@ -143,7 +143,7 @@ export default function Blog() {
           </div>
 
           {/* Posts Grid */}
-       {/*    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <Card key={post.slug} hover>
                 <img
@@ -162,7 +162,7 @@ export default function Blog() {
                       <span>{post.author}</span>
                     </div>
                   </div>
-                  
+
                   <span className="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
                     {post.category}
                   </span>
@@ -170,11 +170,11 @@ export default function Blog() {
                   <h3 className="text-xl font-bold text-gray-900 leading-tight">
                     {post.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 leading-relaxed">
                     {post.excerpt}
                   </p>
-                  
+
                   <Link
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group"
@@ -186,12 +186,85 @@ export default function Blog() {
               </Card>
             ))}
           </div>
- */}
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-500 text-lg">{t('blog:empty')}</p>
             </div>
           )}
+
+          {/* External News Section */}
+          <div className="mt-16 pt-16 border-t border-gray-200">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Noticias Relacionadas
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Mantente informado sobre temas de bienestar mental y desarrollo comunitario en Chile
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card hover>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    Ministerio de Salud - Salud Mental
+                  </h3>
+                  <p className="text-gray-600">
+                    Información oficial sobre programas y políticas de salud mental en Chile
+                  </p>
+                  <a
+                    href="https://www.minsal.cl/salud-mental/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group"
+                  >
+                    Visitar sitio
+                    <ExternalLink className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </Card>
+
+              <Card hover>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    Fundación Todo Mejora
+                  </h3>
+                  <p className="text-gray-600">
+                    Organización dedicada a la prevención del suicidio y promoción del bienestar mental
+                  </p>
+                  <a
+                    href="https://todomejora.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group"
+                  >
+                    Visitar sitio
+                    <ExternalLink className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </Card>
+
+              <Card hover>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    ACHS - Bienestar Mental
+                  </h3>
+                  <p className="text-gray-600">
+                    Recursos y programas de bienestar mental en el ámbito laboral y comunitario
+                  </p>
+                  <a
+                    href="https://www.achs.cl/portal/trabajadores/Paginas/salud-mental.aspx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group"
+                  >
+                    Visitar sitio
+                    <ExternalLink className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
     </>
