@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "title": "Donations",
+    "subtitle": "Your contribution makes our mental health work possible"
+  },
+  "donationType": {
+    "title": "Contribution Type",
+    "oneTime": {
+      "title": "One-time Donation",
+      "description": "Make a single contribution to support our mental health programs"
+    },
+    "monthly": {
+      "title": "Monthly Membership",
+      "description": "Become a member and provide ongoing support with exclusive benefits"
+    }
+  },
+  "membershipTiers": {
+    "title": "Membership Tiers",
+    "basic": {
+      "name": "Basic",
+      "amount": 5,
+      "description": "Fundamental support for our programs"
+    },
+    "premium": {
+      "name": "Premium",
+      "amount": 15,
+      "description": "Significant contribution with greater impact"
+    },
+    "champion": {
+      "name": "Champion",
+      "amount": 30,
+      "description": "Maximum level of support and commitment"
+    }
+  },
+  "membershipBenefits": {
+    "title": "Membership Benefits",
+    "updates": {
+      "title": "Exclusive Reports",
+      "description": "Receive detailed monthly reports on the impact of your contribution"
+    },
+    "priority": {
+      "title": "Priority Access",
+      "description": "Priority access to workshops, seminars and foundation events"
+    },
+    "community": {
+      "title": "Member Community",
+      "description": "Access to our private community of committed members"
+    },
+    "recognition": {
+      "title": "Recognition",
+      "description": "Membership certificates and public recognition (optional)"
+    }
+  },
+  "form": {
+    "title": "Make a Donation",
+    "titleMembership": "Become a Member",
+    "currency": "Currency",
+    "amount": "Amount",
+    "monthlyAmount": "Monthly Amount",
+    "customAmount": "Custom amount",
+    "personalInfo": "Personal information",
+    "optionalMessage": "Optional message",
+    "messagePlaceholder": "Share why you want to support our cause...",
+    "securityNotice": {
+      "title": "Secure Donation",
+      "description": "Your data is protected with SSL encryption and we don't store card information."
+    },
+    "submitButton": "Donate",
+    "submitButtonMembership": "Become a Member",
+    "processing": "Processing...",
+    "processingMembership": "Setting up membership..."
+  },
+  "currencies": {
+    "EUR": "Euro",
+    "USD": "US Dollar",
+    "CLP": "Chilean Peso"
+  },
+  "impact": {
+    "title": "Your Impact with ",
+    "workshops": {
+      "title": "Psychology Workshops",
+      "description": "Educational programs in mental health",
+      "impact": "Fund a complete workshop"
+    },
+    "counseling": {
+      "title": "Psychological Counseling",
+      "description": "Professional support sessions",
+      "impact": "Cover 3 therapy sessions"
+    },
+    "support": {
+      "title": "Support Services",
+      "description": "Emotional accompaniment programs",
+      "impact": "Support a family for a month"
+    }
+  },
+  "whyDonate": {
+    "title": "Why donate?",
+    "reasons": [
+      "85% of your donation goes directly to mental health programs",
+      "Total transparency in the use of funds",
+      "Measurable and verifiable impact in the community"
+    ]
+  },
+  "whyMembership": {
+    "title": "Why become a member?",
+    "reasons": [
+      "Continuous and sustainable support for our programs",
+      "Active participation in the mental health community",
+      "Exclusive access to content and special events",
+      "Recognition as a mental health advocate"
+    ]
+  },
+  "validation": {
+    "minAmount": "Minimum $5 USD",
+    "maxAmount": "Maximum $12,000 USD",
+    "nameRequired": "Name required",
+    "invalidEmail": "Invalid email"
+  },
+  "success": {
+    "donation": "Thank you for your donation of {amount}!",
+    "membership": "Welcome as a member of Fundación Almare!"
+  }
+}

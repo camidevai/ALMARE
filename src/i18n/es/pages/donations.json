@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "title": "Donaciones",
+    "subtitle": "Tu contribución hace posible nuestro trabajo en salud mental"
+  },
+  "donationType": {
+    "title": "Tipo de Contribución",
+    "oneTime": {
+      "title": "Donación Única",
+      "description": "Haz una contribución puntual para apoyar nuestros programas de salud mental"
+    },
+    "monthly": {
+      "title": "Membresía Mensual",
+      "description": "Conviértete en miembro y apoya de forma continua con beneficios exclusivos"
+    }
+  },
+  "membershipTiers": {
+    "title": "Niveles de Membresía",
+    "basic": {
+      "name": "Básico",
+      "amount": 5,
+      "description": "Apoyo fundamental para nuestros programas"
+    },
+    "premium": {
+      "name": "Premium",
+      "amount": 15,
+      "description": "Contribución significativa con mayor impacto"
+    },
+    "champion": {
+      "name": "Champion",
+      "amount": 30,
+      "description": "Máximo nivel de apoyo y compromiso"
+    }
+  },
+  "membershipBenefits": {
+    "title": "Beneficios de Membresía",
+    "updates": {
+      "title": "Reportes Exclusivos",
+      "description": "Recibe informes mensuales detallados sobre el impacto de tu contribución"
+    },
+    "priority": {
+      "title": "Acceso Prioritario",
+      "description": "Prioridad en talleres, seminarios y eventos de la fundación"
+    },
+    "community": {
+      "title": "Comunidad de Miembros",
+      "description": "Acceso a nuestra comunidad privada de miembros comprometidos"
+    },
+    "recognition": {
+      "title": "Reconocimiento",
+      "description": "Certificados de membresía y reconocimiento público (opcional)"
+    }
+  },
+  "form": {
+    "title": "Hacer una Donación",
+    "titleMembership": "Convertirse en Miembro",
+    "currency": "Moneda",
+    "amount": "Cantidad",
+    "monthlyAmount": "Cantidad Mensual",
+    "customAmount": "Cantidad personalizada",
+    "personalInfo": "Información personal",
+    "optionalMessage": "Mensaje opcional",
+    "messagePlaceholder": "Comparte por qué quieres apoyar nuestra causa...",
+    "securityNotice": {
+      "title": "Donación Segura",
+      "description": "Tus datos están protegidos con cifrado SSL y no almacenamos información de tarjetas."
+    },
+    "submitButton": "Donar",
+    "submitButtonMembership": "Convertirse en Miembro",
+    "processing": "Procesando...",
+    "processingMembership": "Configurando membresía..."
+  },
+  "currencies": {
+    "EUR": "Euro",
+    "USD": "Dólar Estadounidense",
+    "CLP": "Peso Chileno"
+  },
+  "impact": {
+    "title": "Tu Impacto con ",
+    "workshops": {
+      "title": "Talleres de Psicología",
+      "description": "Programas educativos en salud mental",
+      "impact": "Financia un taller completo"
+    },
+    "counseling": {
+      "title": "Consultoría Psicológica",
+      "description": "Sesiones de apoyo profesional",
+      "impact": "Cubre 3 sesiones de terapia"
+    },
+    "support": {
+      "title": "Servicios de Apoyo",
+      "description": "Programas de acompañamiento emocional",
+      "impact": "Apoya a una familia por un mes"
+    }
+  },
+  "whyDonate": {
+    "title": "¿Por qué donar?",
+    "reasons": [
+      "85% de tu donación va directamente a programas de salud mental",
+      "Transparencia total en el uso de fondos",
+      "Impacto medible y verificable en la comunidad"
+    ]
+  },
+  "whyMembership": {
+    "title": "¿Por qué ser miembro?",
+    "reasons": [
+      "Apoyo continuo y sostenible a nuestros programas",
+      "Participación activa en la comunidad de salud mental",
+      "Acceso exclusivo a contenido y eventos especiales",
+      "Reconocimiento como defensor de la salud mental"
+    ]
+  },
+  "validation": {
+    "minAmount": "Mínimo $5 USD",
+    "maxAmount": "Máximo $12.000 USD",
+    "nameRequired": "Nombre requerido",
+    "invalidEmail": "Email inválido"
+  },
+  "success": {
+    "donation": "¡Gracias por tu donación de apoyo!",
+    "membership": "¡Bienvenido como miembro de Fundación Almare!"
+  }
+}
