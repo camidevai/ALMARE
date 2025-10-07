@@ -33,7 +33,7 @@ export default function HeroSection({
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
           {title}
         </h1>
-        <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+        <p className="text-2xl md:text-3xl text-blue-100 mb-8 max-w-3xl mx-auto">
           {subtitle}
         </p>
         {ctaText && ctaLink && (
