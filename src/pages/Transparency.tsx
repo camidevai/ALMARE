@@ -35,14 +35,14 @@ export default function Transparency() {
     {
       icon: TrendingUp,
       label: t('transparency:financials.programExpenses'),
-      value: '85%',
-      change: 'Proyectado',
+      value: '0%',
+      change: 'Inicial',
     },
     {
       icon: CheckCircle,
       label: t('transparency:financials.adminCosts'),
-      value: '15%',
-      change: 'Máximo',
+      value: '0%',
+      change: 'Inicial',
     },
   ];
 
@@ -50,17 +50,62 @@ export default function Transparency() {
     {
       name: 'Talleres de Bienestar Emocional',
       status: 'inDevelopment',
-      progress: 25,
+      progress: 0,
     },
     {
       name: 'Programa de Apoyo Psicológico Grupal',
       status: 'planned',
-      progress: 10,
+      progress: 0,
     },
     {
       name: 'Seminarios de Concientización en Salud Mental',
       status: 'inDevelopment',
-      progress: 40,
+      progress: 0,
+    },
+    {
+      name: 'Almare TEA 360°',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Educa',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Laboral',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Rural Conecta',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Inclusión',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Primera Infancia',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Adulto Mayor',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Resiliencia',
+      status: 'planned',
+      progress: 0,
+    },
+    {
+      name: 'Almare Comunidad Segura',
+      status: 'planned',
+      progress: 0,
     },
   ];
 

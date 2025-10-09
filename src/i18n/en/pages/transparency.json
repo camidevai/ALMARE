@@ -23,6 +23,20 @@
     "title": "Programs in Development",
     "inDevelopment": "In Development",
     "planned": "Planned",
-    "description": "Our mental health programs are being carefully designed to provide the best possible support to our community."
+    "description": "Our mental health programs are being carefully designed to provide the best possible support to our community.",
+    "projectDescriptions": {
+      "talleresbienestar": "Specialized workshops in emotional well-being for different age groups",
+      "apoyopsicologico": "Group psychological support program to strengthen community mental health",
+      "seminariosconcientizacion": "Educational seminars to raise awareness about the importance of mental health",
+      "almaretea360": "Comprehensive support for children and adolescents on the autism spectrum",
+      "almareeduca": "Socioemotional education in schools to promote student well-being",
+      "almarelaboral": "Mental health programs in the workplace to improve work environment",
+      "almareruralconecta": "Bringing psychological support to rural or hard-to-reach areas",
+      "almareinclusion": "Integration of people with disabilities in educational and work spaces",
+      "almareprimerainfancia": "Prevention and promotion of mental health in children aged 0 to 6 years",
+      "almareadultomayor": "Emotional well-being in old age and prevention of loneliness",
+      "almareresiliencia": "Support for people in emotional crisis or after traumatic events",
+      "almarecomunidadsegura": "Prevention of domestic and community violence"
+    }
   }
 }

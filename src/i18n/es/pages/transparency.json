@@ -23,6 +23,20 @@
     "title": "Programas en Desarrollo",
     "inDevelopment": "En Desarrollo",
     "planned": "Planificados",
-    "description": "Nuestros programas de salud mental están siendo cuidadosamente diseñados para brindar el mejor apoyo posible a nuestra comunidad."
+    "description": "Nuestros programas de salud mental están siendo cuidadosamente diseñados para brindar el mejor apoyo posible a nuestra comunidad.",
+    "projectDescriptions": {
+      "talleresbienestar": "Talleres especializados en bienestar emocional para diferentes grupos etarios",
+      "apoyopsicologico": "Programa de apoyo psicológico grupal para fortalecer la salud mental comunitaria",
+      "seminariosconcientizacion": "Seminarios educativos para crear conciencia sobre la importancia de la salud mental",
+      "almaretea360": "Apoyo integral a niños, niñas y adolescentes dentro del espectro autista",
+      "almareeduca": "Educación socioemocional en colegios para promover el bienestar estudiantil",
+      "almarelaboral": "Programas de salud mental en el trabajo para mejorar el ambiente laboral",
+      "almareruralconecta": "Llevar apoyo psicológico a zonas rurales o de difícil acceso",
+      "almareinclusion": "Integración de personas con discapacidad en espacios educativos y laborales",
+      "almareprimerainfancia": "Prevención y promoción de la salud mental en niños de 0 a 6 años",
+      "almareadultomayor": "Bienestar emocional en la vejez y prevención de la soledad",
+      "almareresiliencia": "Apoyo a personas en crisis emocionales o tras eventos traumáticos",
+      "almarecomunidadsegura": "Prevención de la violencia intrafamiliar y comunitaria"
+    }
   }
 }
